@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # API key for Generative AI
-GOOGLE_API_KEY = os.getenv('GEM_API_KEY')
+GOOGLE_API_KEY = st.secrets['GEM_API_KEY']
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-pro')
 
